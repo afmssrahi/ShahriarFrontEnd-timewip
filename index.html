@@ -97,6 +97,13 @@
         padding: 5px 10px;
         border: 1px solid #2271b1;
         border-radius: 3px;
+        transition: all 0.3s;
+    }
+
+    .link-btn:hover {
+        background-color: #2271b1;
+        color: #fff;
+        transition: all 0.3s;
     }
 
     .profile-page-heading h1 {
@@ -106,6 +113,11 @@
         margin-bottom: 30px;
         padding-right: 15px;
         line-height: 1.3;
+    }
+
+    .profile-actions-btn-active {
+        background-color: #2271b1;
+        color: #fff;
     }
 
     /* Header Section */
@@ -190,7 +202,7 @@
                                 <h3 class="profile-actions-heading">Actions</h3>
                                 <div class="profile-actions-btns">
                                     <ul>
-                                        <li><a class="link-btn" href="#">Edit</a></li>
+                                        <li><a class="link-btn profile-actions-btn-active" href="#">Edit</a></li>
                                         <li><a class="link-btn" href="#">Terminate</a></li>
                                         <li><a class="link-btn" href="#">Print</a></li>
                                     </ul>
