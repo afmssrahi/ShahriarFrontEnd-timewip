@@ -242,14 +242,6 @@
 
     /* add inside profile info table*/
 
-    /* .inside-profile-table-row p {
-        color: #808080;
-        font-size: 13px;
-        font-weight: 300;
-        line-height: 16px;
-        margin-bottom: 20px;
-    } */
-
     .inside-profile-table-row {
         display: block;
         padding: 10px 10px 20px;
@@ -259,9 +251,14 @@
         margin-bottom: 30px;
     }
 
+
     .profile-table-header,
     .profile-table-single-line {
         display: flex;
+    }
+
+    .profile-table-header {
+        padding-bottom: 5px;
     }
 
     .profile-table-header>div {
@@ -302,7 +299,7 @@
 
     .profile-table-header>div:nth-child(2),
     .profile-table-single-line>div:nth-child(2) {
-        width: 100px;
+        width: 150px;
     }
 
     .profile-table-header>div:nth-child(3),
@@ -317,7 +314,15 @@
 
     .profile-table-header>div:nth-child(5),
     .profile-table-single-line>div:nth-child(5) {
-        width: calc(100% - 400px);
+        width: calc(100% - 550px);
+    }
+
+    .inside-profile-table-row .no-info-field {
+        color: #808080;
+        font-size: 13px;
+        font-weight: 300;
+        line-height: 16px;
+        margin-bottom: 20px;
     }
 
     .profile-info-add-btn {
@@ -331,6 +336,12 @@
         outline: none;
         cursor: pointer;
         transition: all 0.3s;
+    }
+
+    /* education table */
+    .profile-table-header-education>div:nth-child(n),
+    .profile-table-single-line-education>div:nth-child(n) {
+        width: 100%;
     }
 </style>
 
@@ -588,12 +599,34 @@
                     </div>
                 </section>
 
+
+                <!--  Work Experience info -->
+                <section class="profile-info profile-work-experience-info">
+                    <div class="profile-info-details">
+                        <div class="profile-info-header-row">
+                            <h3 class="profile-info-heading">Work Experiences</h3>
+                            <!-- here was up-arrow-icon -->
+                        </div>
+
+                        <div class="inside-profile-table-row profile-work-experience-info-row">
+                            <div class="add-profile-info">
+                                <p>No work experiences found.</p>
+                                <button class="profile-info-add-btn ">Add Experience</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
                 <!-- Work Experience -->
                 <section class="profile-info profile-work-experience-info">
                     <div class="profile-info-details">
                         <div class="profile-info-header-row">
                             <h3 class="profile-info-heading">Work Experience</h3>
-
+                            <svg class="up-arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                <!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                                <path
+                                    d="M27.66 224h264.7c24.6 0 36.89-29.78 19.54-47.12l-132.3-136.8c-5.406-5.406-12.47-8.107-19.53-8.107c-7.055 0-14.09 2.701-19.45 8.107L8.119 176.9C-9.229 194.2 3.055 224 27.66 224z" />
+                            </svg>
                         </div>
 
                         <div class="inside-profile-table-row profile-work-experience-info-row">
@@ -615,7 +648,8 @@
                                             Biller or similar role Solid understanding of billing software and
                                             electronic medical records Must have the ability to multitask and manage
                                             time effectively Excellent written and verbal communication skills
-                                            Outstanding problem-solving and organizational abilities A Bachelor’s degree
+                                            Outstanding problem-solving and organizational abilities A Bachelor's
+                                            degree
                                             in business, health care administration, accounting or related field is
                                             preferred</div>
                                     </div>
@@ -628,34 +662,20 @@
                                             Biller or similar role Solid understanding of billing software and
                                             electronic medical records Must have the ability to multitask and manage
                                             time effectively Excellent written and verbal communication skills
-                                            Outstanding problem-solving and organizational abilities A Bachelor’s degree
+                                            Outstanding problem-solving and organizational abilities A Bachelor's
+                                            degree
                                             in business, health care administration, accounting or related field is
                                             preferred</div>
                                     </div>
                                 </div>
                             </div>
 
+                            <!-- <p class="no-info-field">No dependent information found.</p> -->
                             <button class="profile-info-add-btn ">Add Experience</button>
                         </div>
                     </div>
                 </section>
 
-                <!--  Work Experience info -->
-                <section class="profile-info profile-work-experience-info">
-                    <div class="profile-info-details">
-                        <div class="profile-info-header-row">
-                            <h3 class="profile-info-heading">Work Experiences</h3>
-                            <!-- here was up-arrow-icon -->
-                        </div>
-
-                        <div class="inside-profile-table-row profile-work-experience-info-row">
-                            <div class="add-profile-info">
-                                <p>No work experiences found.</p>
-                                <button class="profile-info-add-btn ">Add Experience</button>
-                            </div>
-                        </div>
-                    </div>
-                </section>
 
                 <!-- Education info -->
                 <section class="profile-info profile-education-info">
@@ -670,6 +690,50 @@
                                 <p>No education information found.</p>
                                 <button class="profile-info-add-btn ">Add Education</button>
                             </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Education info -->
+                <section class="profile-info profile-education-info">
+                    <div class="profile-info-details">
+                        <div class="profile-info-header-row">
+                            <h3 class="profile-info-heading">Education</h3>
+                            <svg class="up-arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                <!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                                <path
+                                    d="M27.66 224h264.7c24.6 0 36.89-29.78 19.54-47.12l-132.3-136.8c-5.406-5.406-12.47-8.107-19.53-8.107c-7.055 0-14.09 2.701-19.45 8.107L8.119 176.9C-9.229 194.2 3.055 224 27.66 224z" />
+                            </svg>
+                        </div>
+
+                        <div class="inside-profile-table-row profile-education-info-row">
+                            <div class="inside-profile-table inside-profile-education-table">
+                                <div class="profile-table-row">
+                                    <div class="profile-table-header profile-table-header-education">
+                                        <div class="profile-table-header1">School Name</div>
+                                        <div class="profile-table-header2">Degree</div>
+                                        <div class="profile-table-header3">Field(s) of Study</div>
+                                        <div class="profile-table-header4">Year of Completion</div>
+                                        <div class="profile-table-header5">Result</div>
+                                        <div class="profile-table-header6">Additional Notes</div>
+                                        <div class="profile-table-header7">Interests</div>
+                                        <div class="profile-table-header8">Expiration date</div>
+                                    </div>
+                                    <div class="profile-table-single-line profile-table-single-line-education">
+                                        <div class="profile-table-single-line1">Chandaikona Gov. High School</div>
+                                        <div class="profile-table-single-line2">Primary School Certificate</div>
+                                        <div class="profile-table-single-line3">General</div>
+                                        <div class="profile-table-single-line4">1993</div>
+                                        <div class="profile-table-single-line5">66%</div>
+                                        <div class="profile-table-single-line6"> - </div>
+                                        <div class="profile-table-single-line7">Play Games</div>
+                                        <div class="profile-table-single-line8">2022-02-26</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <p class="no-info-field">No education information found.</p>
+                            <button class="profile-info-add-btn ">Add Education</button>
                         </div>
                     </div>
                 </section>
