@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Employee Profile</title>
 
-    <!-- Google fonts Poppins -->
 </head>
 
 <!-- Main Style -->
@@ -63,8 +62,8 @@
     }
 
 
-    /* Common style */
-    .main-body {
+    /* Header Section */
+    .main-body-profile {
         padding: 36px 10%;
     }
 
@@ -92,22 +91,6 @@
     .link-btn:hover {
         color: #fff;
     }
-
-    .profile-page-heading h1 {
-        display: inline-block;
-        font-size: 23px;
-        font-weight: 600;
-        margin-bottom: 30px;
-        padding-right: 15px;
-        line-height: 1.3;
-    }
-
-    .up-arrow-icon {
-        width: 16px;
-        height: 16px;
-        fill: #1C4396;
-    }
-
 
     /* Header Section */
     .header-row {
@@ -205,11 +188,26 @@
         border: 1px solid #f0f0f0;
     }
 
+    .profile-page-heading h1 {
+        display: inline-block;
+        font-size: 23px;
+        font-weight: 600;
+        margin-bottom: 30px;
+        padding-right: 15px;
+        line-height: 1.3;
+    }
+
+    .up-arrow-icon {
+        width: 16px;
+        height: 16px;
+        fill: #1C4396;
+    }
+
     .profile-info-header-row {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 10px 10px;
+        padding: 10px;
         border-bottom: 1px solid #f0f0f0;
     }
 
@@ -241,13 +239,37 @@
         line-height: 28px;
         font-weight: 600;
     }
+
+    /* add inside profile info */
+    .add-profile-info {
+        padding: 10px 10px 30px;
+    }
+
+    .add-profile-info span {
+        color: #808080;
+        font-size: 13px;
+        font-weight: 300;
+        line-height: 16px;
+    }
+
+    .profile-info-add-btn {
+        color: #fff;
+        background: #1C4396;
+        padding: 7px 12px;
+        border-radius: 3px;
+        font-size: 13px;
+        font-weight: 700;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        transition: all 0.3s;
+    }
 </style>
 
 <body>
     <div class="dashboard-content-header">
         <div class="content-header-inner content-header-inner-small">
-            <div class="main-body">
-
+            <div class="main-body-profile">
                 <!-- employee profile header -->
                 <section class="employee-profile-header">
                     <div class="profile-page-heading">
@@ -304,7 +326,7 @@
 
 
                 <!-- Profile basic info -->
-                <section class="profile-basic-info profile-info">
+                <section class="profile-info profile-basic-info">
                     <div class="profile-info-details">
                         <div class="profile-info-header-row">
                             <h3 class="profile-info-heading">Basic Info</h3>
@@ -341,10 +363,10 @@
                 </section>
 
                 <!-- Work info -->
-                <section class="profile-basic-info profile-info">
+                <section class="profile-info profile-work-info">
                     <div class="profile-info-details">
                         <div class="profile-info-header-row">
-                            <h3 class="profile-info-heading">Basic Info</h3>
+                            <h3 class="profile-info-heading">Work</h3>
                             <svg class="up-arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
                                 <!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
                                 <path
@@ -352,36 +374,56 @@
                             </svg>
                         </div>
 
-                        <div class="inside-profile-info-row profile-basic-info-row">
-                            <div class="first-name">
-                                <span class="first-name-label">First Name</span>
+                        <div class="inside-profile-info-row profile-work-info-row">
+                            <div class="department">
+                                <span class="department-label">Department</span>
                                 <span class="colon">:</span>
-                                <span class="first-name-value">Sobuj</span>
+                                <span class="department-value">software</span>
                             </div>
-                            <div class="last-name">
-                                <span class="first-name-label">Last Name</span>
+                            <div class="title">
+                                <span class="title-label">Title</span>
                                 <span class="colon">:</span>
-                                <span class="first-name-value">Mia</span>
+                                <span class="title-value">Engineer</span>
                             </div>
-                            <div class="employee-id">
-                                <span class="first-name-label">Employee ID</span>
+                            <div class="reporting-to">
+                                <span class="reporting-to-label">Reporting To</span>
                                 <span class="colon">:</span>
-                                <span class="first-name-value">12314234</span>
+                                <span class="reporting-to-value"><a href="#">Pranto Pranto</a></span>
                             </div>
-                            <div class="email">
-                                <span class="first-name-label">Email</span>
+                            <div class="date-of-hire">
+                                <span class="date-of-hire-label">Date of Hire</span>
                                 <span class="colon">:</span>
-                                <span class="first-name-value"><a href="#">shobuj@mail.com</a></span>
+                                <span class="date-of-hire-value"><strong>09-02-2022</strong></span>
+                            </div>
+                            <div class="source-of-hire">
+                                <span class="source-of-hire-label">Source of Hire</span>
+                                <span class="colon">:</span>
+                                <span class="source-of-hire-value">Direct</span>
+                            </div>
+                            <div class="employee-status">
+                                <span class="employee-status-label">Employee Status</span>
+                                <span class="colon">:</span>
+                                <span class="employee-status-value">Active</span>
+                            </div>
+                            <div class="work-phone">
+                                <span class="work-phone-label">Work Phone</span>
+                                <span class="colon">:</span>
+                                <span class="work-phone-value"><a href="tel:3434253453">3434253453</a></span>
+                            </div>
+                            <div class="employee-type">
+                                <span class="employee-type-label">Employee Type</span>
+                                <span class="colon">:</span>
+                                <span class="employee-type-value">full</span>
                             </div>
                         </div>
                     </div>
                 </section>
 
                 <!-- Personal Details info -->
-                <section class="profile-basic-info profile-info">
+                <section class="profile-info profile-personal-info">
                     <div class="profile-info-details">
                         <div class="profile-info-header-row">
-                            <h3 class="profile-info-heading">Basic Info</h3>
+                            <h3 class="profile-info-heading">Personal Details</h3>
                             <svg class="up-arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
                                 <!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
                                 <path
@@ -389,26 +431,140 @@
                             </svg>
                         </div>
 
-                        <div class="inside-profile-info-row profile-basic-info-row">
-                            <div class="first-name">
-                                <span class="first-name-label">First Name</span>
+                        <div class="inside-profile-info-row profile-personal-info-row">
+                            <div class="title">
+                                <span class="title-label">Title</span>
                                 <span class="colon">:</span>
-                                <span class="first-name-value">Sobuj</span>
+                                <span class="title-value"> --- </span>
                             </div>
-                            <div class="last-name">
-                                <span class="first-name-label">Last Name</span>
+                            <div class="reporting-to">
+                                <span class="reporting-to-label">Reporting To</span>
                                 <span class="colon">:</span>
-                                <span class="first-name-value">Mia</span>
+                                <span class="reporting-to-value"> --- </span>
                             </div>
-                            <div class="employee-id">
-                                <span class="first-name-label">Employee ID</span>
+                            <div class="date-of-hire">
+                                <span class="date-of-hire-label">Date of Hire</span>
                                 <span class="colon">:</span>
-                                <span class="first-name-value">12314234</span>
+                                <span class="date-of-hire-value"> --- </span>
                             </div>
-                            <div class="email">
-                                <span class="first-name-label">Email</span>
+                            <div class="source-of-hire">
+                                <span class="source-of-hire-label">Source of Hire</span>
                                 <span class="colon">:</span>
-                                <span class="first-name-value">shobuj@mail.com</span>
+                                <span class="source-of-hire-value"> --- </span>
+                            </div>
+                            <div class="employee-status">
+                                <span class="employee-status-label">Employee Status</span>
+                                <span class="colon">:</span>
+                                <span class="employee-status-value"> --- </span>
+                            </div>
+                            <div class="work-phone">
+                                <span class="work-phone-label">Work Phone</span>
+                                <span class="colon">:</span>
+                                <span class="work-phone-value"> --- </span>
+                            </div>
+                            <div class="employee-type">
+                                <span class="employee-type-label">Employee Type</span>
+                                <span class="colon">:</span>
+                                <span class="employee-type-value"> --- </span>
+                            </div>
+                            <div class="title">
+                                <span class="title-label">Title</span>
+                                <span class="colon">:</span>
+                                <span class="title-value"> --- </span>
+                            </div>
+                            <div class="reporting-to">
+                                <span class="reporting-to-label">Reporting To</span>
+                                <span class="colon">:</span>
+                                <span class="reporting-to-value"> --- </span>
+                            </div>
+                            <div class="date-of-hire">
+                                <span class="date-of-hire-label">Date of Hire</span>
+                                <span class="colon">:</span>
+                                <span class="date-of-hire-value"><strong>09-02-2022</strong></span>
+                            </div>
+                            <div class="source-of-hire">
+                                <span class="source-of-hire-label">Source of Hire</span>
+                                <span class="colon">:</span>
+                                <span class="source-of-hire-value"> --- </span>
+                            </div>
+                            <div class="employee-status">
+                                <span class="employee-status-label">Employee Status</span>
+                                <span class="colon">:</span>
+                                <span class="employee-status-value">Active</span>
+                            </div>
+                            <div class="work-phone">
+                                <span class="work-phone-label">Work Phone</span>
+                                <span class="colon">:</span>
+                                <span class="work-phone-value"> --- </span>
+                            </div>
+                            <div class="employee-type">
+                                <span class="employee-type-label">Employee Type</span>
+                                <span class="colon">:</span>
+                                <span class="employee-type-value"> --- </span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!--  Work Experience info -->
+                <section class="profile-info profile-work-experience-info">
+                    <div class="profile-info-details">
+                        <div class="profile-info-header-row">
+                            <h3 class="profile-info-heading">Work Experiences</h3>
+                            <svg class="up-arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                <!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                                <path
+                                    d="M27.66 224h264.7c24.6 0 36.89-29.78 19.54-47.12l-132.3-136.8c-5.406-5.406-12.47-8.107-19.53-8.107c-7.055 0-14.09 2.701-19.45 8.107L8.119 176.9C-9.229 194.2 3.055 224 27.66 224z" />
+                            </svg>
+                        </div>
+
+                        <div class="inside-add-profile-info-row profile-work-experience-info-row">
+                            <div class="add-profile-info">
+                                <span>No work experiences found.</span>
+                                <button class="profile-info-add-btn ">+ Add Experience</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Education info -->
+                <section class="profile-info profile-education-info">
+                    <div class="profile-info-details">
+                        <div class="profile-info-header-row">
+                            <h3 class="profile-info-heading">Education</h3>
+                            <svg class="up-arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                <!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                                <path
+                                    d="M27.66 224h264.7c24.6 0 36.89-29.78 19.54-47.12l-132.3-136.8c-5.406-5.406-12.47-8.107-19.53-8.107c-7.055 0-14.09 2.701-19.45 8.107L8.119 176.9C-9.229 194.2 3.055 224 27.66 224z" />
+                            </svg>
+                        </div>
+
+                        <div class="inside-add-profile-info-row profile-education-info-row">
+                            <div class="add-profile-info">
+                                <span>No education information found.</span>
+                                <button class="profile-info-add-btn ">+ Add Education</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                </section>
+
+                <!-- Dependent info -->
+                <section class="profile-info profile-dependent-info">
+                    <div class="profile-info-details">
+                        <div class="profile-info-header-row">
+                            <h3 class="profile-info-heading">Dependent</h3>
+                            <svg class="up-arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                <!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                                <path
+                                    d="M27.66 224h264.7c24.6 0 36.89-29.78 19.54-47.12l-132.3-136.8c-5.406-5.406-12.47-8.107-19.53-8.107c-7.055 0-14.09 2.701-19.45 8.107L8.119 176.9C-9.229 194.2 3.055 224 27.66 224z" />
+                            </svg>
+                        </div>
+
+                        <div class="inside-add-profile-info-row profile-dependent-info-row">
+                            <div class="add-profile-info">
+                                <span>No dependent information found.</span>
+                                <button class="profile-info-add-btn ">+ Add Dependents</button>
                             </div>
                         </div>
                     </div>
