@@ -240,17 +240,84 @@
         font-weight: 600;
     }
 
-    /* add inside profile info */
-    .add-profile-info {
-        padding: 10px 10px 20px;
-    }
+    /* add inside profile info table*/
 
-    .add-profile-info p {
+    /* .inside-profile-table-row p {
         color: #808080;
         font-size: 13px;
         font-weight: 300;
         line-height: 16px;
         margin-bottom: 20px;
+    } */
+
+    .inside-profile-table-row {
+        display: block;
+        padding: 10px 10px 20px;
+    }
+
+    .inside-profile-table {
+        margin-bottom: 30px;
+    }
+
+    .profile-table-header,
+    .profile-table-single-line {
+        display: flex;
+    }
+
+    .profile-table-header>div {
+        color: #b8bace;
+        font-weight: 600;
+    }
+
+    .profile-table-header>div,
+    .profile-table-single-line>div {
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+
+    .profile-table-single-line {
+        border: 1px solid #f0f0f0;
+        border-bottom: none;
+    }
+
+    .profile-table-single-line:last-child {
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+
+    .profile-table-single-line>div {
+        border-right: 1px solid #f0f0f0;
+        color: #202020;
+        font-weight: 600;
+    }
+
+    .profile-table-single-line>div:last-child {
+        border-right: none;
+    }
+
+    .profile-table-header>div:nth-child(1),
+    .profile-table-single-line>div:nth-child(1) {
+        width: 200px;
+    }
+
+    .profile-table-header>div:nth-child(2),
+    .profile-table-single-line>div:nth-child(2) {
+        width: 100px;
+    }
+
+    .profile-table-header>div:nth-child(3),
+    .profile-table-single-line>div:nth-child(3) {
+        width: 100px;
+    }
+
+    .profile-table-header>div:nth-child(4),
+    .profile-table-single-line>div:nth-child(4) {
+        width: 100px;
+    }
+
+    .profile-table-header>div:nth-child(5),
+    .profile-table-single-line>div:nth-child(5) {
+        width: calc(100% - 400px);
     }
 
     .profile-info-add-btn {
@@ -359,6 +426,8 @@
                     </div>
                 </section>
 
+
+
                 <!-- Work info -->
                 <section class="profile-info profile-work-info">
                     <div class="profile-info-details">
@@ -412,85 +481,161 @@
                     </div>
                 </section>
 
-                <!-- Personal Details info -->
-                <section class="profile-info profile-personal-info">
+
+                <!-- Personal Details -->
+                <section class="profile-info profile-work-experience-info-row">
                     <div class="profile-info-details">
                         <div class="profile-info-header-row">
                             <h3 class="profile-info-heading">Personal Details</h3>
-                            <!-- here was up-arrow-icon -->
+                            <svg class="up-arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                <path
+                                    d="M27.66 224h264.7c24.6 0 36.89-29.78 19.54-47.12l-132.3-136.8c-5.406-5.406-12.47-8.107-19.53-8.107c-7.055 0-14.09 2.701-19.45 8.107L8.119 176.9C-9.229 194.2 3.055 224 27.66 224z" />
+                            </svg>
                         </div>
 
                         <div class="inside-profile-info-row profile-personal-info-row">
-                            <div class="title">
-                                <span class="title-label">Title</span>
+                            <div class="blood-group">
+                                <span class="blood-group-label">Blood Group</span>
                                 <span class="colon">:</span>
-                                <span class="title-value"> --- </span>
+                                <span class="blood-group-value"> --- </span>
                             </div>
-                            <div class="reporting-to">
-                                <span class="reporting-to-label">Reporting To</span>
+                            <div class="spouse-name">
+                                <span class="spouse-name-label">Spouse's Name</span>
                                 <span class="colon">:</span>
-                                <span class="reporting-to-value"> --- </span>
+                                <span class="spouse-name-value"> --- </span>
                             </div>
-                            <div class="date-of-hire">
-                                <span class="date-of-hire-label">Date of Hire</span>
+                            <div class="father-name">
+                                <span class="father-name-label">Father's Name</span>
                                 <span class="colon">:</span>
-                                <span class="date-of-hire-value"> --- </span>
+                                <span class="father-name-value"> --- </span>
                             </div>
-                            <div class="source-of-hire">
-                                <span class="source-of-hire-label">Source of Hire</span>
+                            <div class="mother-name">
+                                <span class="mother-name-label">Mother's Name</span>
                                 <span class="colon">:</span>
-                                <span class="source-of-hire-value"> --- </span>
+                                <span class="mother-name-value"> --- </span>
                             </div>
-                            <div class="employee-status">
-                                <span class="employee-status-label">Employee Status</span>
+                            <div class="address1">
+                                <span class="address1-label">Address 1</span>
                                 <span class="colon">:</span>
-                                <span class="employee-status-value"> --- </span>
+                                <span class="address1-value"> --- </span>
                             </div>
-                            <div class="work-phone">
-                                <span class="work-phone-label">Work Phone</span>
+                            <div class="address2">
+                                <span class="address1-label">Address 2</span>
                                 <span class="colon">:</span>
-                                <span class="work-phone-value"> --- </span>
+                                <span class="address1-value"> --- </span>
                             </div>
-                            <div class="employee-type">
-                                <span class="employee-type-label">Employee Type</span>
+                            <div class="city">
+                                <span class="city-label">City</span>
                                 <span class="colon">:</span>
-                                <span class="employee-type-value"> --- </span>
+                                <span class="city-value"> --- </span>
                             </div>
-                            <div class="title">
-                                <span class="title-label">Title</span>
+                            <div class="country">
+                                <span class="country-label">Country</span>
                                 <span class="colon">:</span>
-                                <span class="title-value"> --- </span>
+                                <span class="country-value"> --- </span>
                             </div>
-                            <div class="reporting-to">
-                                <span class="reporting-to-label">Reporting To</span>
+                            <div class="state">
+                                <span class="state-label">State</span>
                                 <span class="colon">:</span>
-                                <span class="reporting-to-value"> --- </span>
+                                <span class="state-value"> --- </span>
                             </div>
-                            <div class="date-of-hire">
-                                <span class="date-of-hire-label">Date of Hire</span>
+                            <div class="postal-code">
+                                <span class="postal-code-label">Zip/Postal Code</span>
                                 <span class="colon">:</span>
-                                <span class="date-of-hire-value"><strong>09-02-2022</strong></span>
+                                <span class="postal-code-value"> --- </span>
                             </div>
-                            <div class="source-of-hire">
-                                <span class="source-of-hire-label">Source of Hire</span>
+                            <div class="mobile-num">
+                                <span class="mobile-num-label">Mobile No.</span>
                                 <span class="colon">:</span>
-                                <span class="source-of-hire-value"> --- </span>
+                                <span class="mobile-num-value"><a href="tel:7637643237">7637643237</a></span>
                             </div>
-                            <div class="employee-status">
-                                <span class="employee-status-label">Employee Status</span>
+                            <div class="personal-email">
+                                <span class="personal-email-label">Personal Email</span>
                                 <span class="colon">:</span>
-                                <span class="employee-status-value">Active</span>
+                                <span class="personal-email-value"><a href="#">personal@gmail.com</a></span>
                             </div>
-                            <div class="work-phone">
-                                <span class="work-phone-label">Work Phone</span>
+                            <div class="date-of-birth">
+                                <span class="date-of-birth-label">Date of Birth</span>
                                 <span class="colon">:</span>
-                                <span class="work-phone-value"> --- </span>
+                                <span class="date-of-birth-value"> --- </span>
                             </div>
-                            <div class="employee-type">
-                                <span class="employee-type-label">Employee Type</span>
+                            <div class="gender">
+                                <span class="gender-label">Gender</span>
                                 <span class="colon">:</span>
-                                <span class="employee-type-value"> --- </span>
+                                <span class="gender-value"> Male </span>
                             </div>
+                            <div class="nationality">
+                                <span class="nationality-label">Nationality</span>
+                                <span class="colon">:</span>
+                                <span class="nationality-value"> --- </span>
+                            </div>
+                            <div class="marital-status">
+                                <span class="marital-status-label">Marital Status</span>
+                                <span class="colon">:</span>
+                                <span class="marital-status-value"> Single </span>
+                            </div>
+                            <div class="driver-license">
+                                <span class="driver-license-label">Driver License</span>
+                                <span class="colon">:</span>
+                                <span class="driver-license-value"> --- </span>
+                            </div>
+                            <div class="hobbies">
+                                <span class="hobbies-label">Hobbies</span>
+                                <span class="colon">:</span>
+                                <span class="hobbies-value"> --- </span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Work Experience -->
+                <section class="profile-info profile-work-experience-info">
+                    <div class="profile-info-details">
+                        <div class="profile-info-header-row">
+                            <h3 class="profile-info-heading">Work Experience</h3>
+
+                        </div>
+
+                        <div class="inside-profile-table-row profile-work-experience-info-row">
+                            <div class="inside-profile-table inside-profile-work-experience-table">
+                                <div class="profile-table-row">
+                                    <div class="profile-table-header">
+                                        <div class="profile-table-header1">Previous Company</div>
+                                        <div class="profile-table-header2">Job Title</div>
+                                        <div class="profile-table-header3">From</div>
+                                        <div class="profile-table-header4">To</div>
+                                        <div class="profile-table-header5">Job Description</div>
+                                    </div>
+                                    <div class="profile-table-single-line">
+                                        <div class="profile-table-single-line1">Netmow</div>
+                                        <div class="profile-table-single-line2">Software Engineer</div>
+                                        <div class="profile-table-single-line3">01-02-2022</div>
+                                        <div class="profile-table-single-line4">27-02-2022</div>
+                                        <div class="profile-table-single-line5">Proven work experience as a Medical
+                                            Biller or similar role Solid understanding of billing software and
+                                            electronic medical records Must have the ability to multitask and manage
+                                            time effectively Excellent written and verbal communication skills
+                                            Outstanding problem-solving and organizational abilities A Bachelor’s degree
+                                            in business, health care administration, accounting or related field is
+                                            preferred</div>
+                                    </div>
+                                    <div class="profile-table-single-line">
+                                        <div class="profile-table-single-line1">Netmow</div>
+                                        <div class="profile-table-single-line2">Software Engineer</div>
+                                        <div class="profile-table-single-line3">01-02-2022</div>
+                                        <div class="profile-table-single-line4">27-02-2022</div>
+                                        <div class="profile-table-single-line5">Proven work experience as a Medical
+                                            Biller or similar role Solid understanding of billing software and
+                                            electronic medical records Must have the ability to multitask and manage
+                                            time effectively Excellent written and verbal communication skills
+                                            Outstanding problem-solving and organizational abilities A Bachelor’s degree
+                                            in business, health care administration, accounting or related field is
+                                            preferred</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button class="profile-info-add-btn ">Add Experience</button>
                         </div>
                     </div>
                 </section>
@@ -503,7 +648,7 @@
                             <!-- here was up-arrow-icon -->
                         </div>
 
-                        <div class="inside-add-profile-info-row profile-work-experience-info-row">
+                        <div class="inside-profile-table-row profile-work-experience-info-row">
                             <div class="add-profile-info">
                                 <p>No work experiences found.</p>
                                 <button class="profile-info-add-btn ">Add Experience</button>
@@ -520,7 +665,7 @@
                             <!-- here was up-arrow-icon -->
                         </div>
 
-                        <div class="inside-add-profile-info-row profile-education-info-row">
+                        <div class="inside-profile-table-row profile-education-info-row">
                             <div class="add-profile-info">
                                 <p>No education information found.</p>
                                 <button class="profile-info-add-btn ">Add Education</button>
@@ -537,7 +682,7 @@
                             <!-- here was up-arrow-icon -->
                         </div>
 
-                        <div class="inside-add-profile-info-row profile-dependent-info-row">
+                        <div class="inside-profile-table-row profile-dependent-info-row">
                             <div class="add-profile-info">
                                 <p>No dependent information found.</p>
                                 <button class="profile-info-add-btn ">Add Dependents</button>
